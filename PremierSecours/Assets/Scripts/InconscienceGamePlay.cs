@@ -8,13 +8,14 @@ public class InconscienceGamePlay : MonoBehaviour
     public GameObject animRouge;
     public GameObject choix1;
     public GameObject choix2;
+    public GameObject choix3;
 
 
     // Start is called before the first frame update
     void Start()
     {
         choix2.gameObject.SetActive(false);
-        
+        choix3.gameObject.SetActive(false);
     }
 
     
@@ -55,8 +56,8 @@ public class InconscienceGamePlay : MonoBehaviour
         Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
         AnimVerte(position);
         //desactiver les 3 canvas et activer le suivant
-        //string flag = "reaction";
-        //StartCoroutine(Wait(flag));
+        string flag = "respire";
+        StartCoroutine(Wait(flag));
         //Wait();
 
     }
@@ -106,6 +107,11 @@ public class InconscienceGamePlay : MonoBehaviour
 
             choix2.gameObject.SetActive(true);
             
+        }
+        else if (flag == "respire")
+        {
+            choix2.gameObject.SetActive(false);
+            choix3.gameObject.SetActive(true);
         }
     }
 
