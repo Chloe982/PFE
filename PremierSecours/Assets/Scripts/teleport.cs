@@ -20,9 +20,19 @@ public class teleport : MonoBehaviour
     {
         
     }
-    public void teleportTo()
+    public void teleportToInconscience()
     {
         origin.transform.position = new Vector3(-4f, 0f, 0f);
         
+    }
+    public void teleportToDefibrilateur()
+    {
+        origin.transform.position = new Vector3(0f, 0f, 4f);
+
+    }
+    public void teleportToBrulure()
+    {
+        origin.transform.position = new Vector3(4f, 0f, 0f);
+
     }
 }
