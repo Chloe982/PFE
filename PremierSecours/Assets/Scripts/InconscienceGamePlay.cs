@@ -6,17 +6,15 @@ public class InconscienceGamePlay : MonoBehaviour
 {
     public GameObject animVerte;
     public GameObject animRouge;
+    public GameObject choix1;
+    public GameObject choix2;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject respire = GameObject.Find("CanvaRespire");
-        respire.gameObject.SetActive(false);
-        GameObject massage = GameObject.Find("CanvaMassage");
-        massage.gameObject.SetActive(false);
-        GameObject bouche = GameObject.Find("CanvaBouche");
-        bouche.gameObject.SetActive(false);
+        choix2.gameObject.SetActive(false);
+        
     }
 
     
@@ -65,14 +63,14 @@ public class InconscienceGamePlay : MonoBehaviour
 
     public void Massage()
     {
-        Vector3 position = new Vector3(-7.6f, 1.8f, 0.6f);
+        Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
         AnimRouge(position);
         //explication 
     }
 
     public void Bouche()
     {
-        Vector3 position = new Vector3(-7.6f, 1.8f, 0.6f);
+        Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
         AnimRouge(position);
         //explication 
     }
@@ -92,9 +90,9 @@ public class InconscienceGamePlay : MonoBehaviour
 
     IEnumerator Wait(string flag)
     {
-        Debug.Log("AVANT");
+        
         yield return new WaitForSeconds(3);
-        Debug.Log("APRES");
+        
         DiscardObjects(flag);
         
     }
@@ -103,21 +101,11 @@ public class InconscienceGamePlay : MonoBehaviour
     {
         if(flag == "reaction")
         {
-            GameObject partir = GameObject.Find("CanvaPartir");
-            partir.gameObject.SetActive(false);
-            GameObject reaction = GameObject.Find("CanvaReaction");
-            reaction.gameObject.SetActive(false);
-            GameObject jeterEau = GameObject.Find("CanvaJeterEau");
-            jeterEau.gameObject.SetActive(false);
+            
+            choix1.gameObject.SetActive(false);
 
-            /*
-            GameObject respire = GameObject.Find("CanvaRespire");
-            respire.gameObject.SetActive(true);
-            GameObject massage = GameObject.Find("CanvaMassage");
-            massage.gameObject.SetActive(true);
-            GameObject bouche = GameObject.Find("CanvaBouche");
-            bouche.gameObject.SetActive(true);
-            */
+            choix2.gameObject.SetActive(true);
+            
         }
     }
 
