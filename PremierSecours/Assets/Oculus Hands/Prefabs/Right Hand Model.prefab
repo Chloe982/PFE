@@ -789,13 +789,10 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-
   m_RayTraceProcedural: 0
-
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3637b758ff163493f8bb8b6d7e96d7ae, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -820,39 +817,14 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
-  m_Bones:
-  - {fileID: 5686134208185136534}
-  - {fileID: 5686134208185136550}
-  - {fileID: 5686134208185136516}
-  - {fileID: 5686134208185136518}
-  - {fileID: 5686134208185136512}
-  - {fileID: 5686134208185136514}
-  - {fileID: 5686134208185136554}
-  - {fileID: 5686134208185136564}
-  - {fileID: 5686134208185136566}
-  - {fileID: 5686134208185136560}
-  - {fileID: 5686134208185136546}
-  - {fileID: 5686134208185136556}
-  - {fileID: 5686134208185136558}
-  - {fileID: 5686134208185136552}
-  - {fileID: 5686134208185136562}
-  - {fileID: 5686134208185136572}
-  - {fileID: 5686134208185136574}
-  - {fileID: 5686134208185136568}
-  - {fileID: 5686134208185136570}
-  - {fileID: 5686134208185136524}
-  - {fileID: 5686134208185136526}
-  - {fileID: 5686134208185136520}
-  - {fileID: 5686134208185136522}
-  - {fileID: 5686134208185136544}
-  - {fileID: 5686134208185136548}
+  m_Mesh: {fileID: 0}
+  m_Bones: []
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 5686134208185136534}
+  m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.0072079375, y: -0.035964184, z: -0.06280201}
-    m_Extent: {x: 0.07287095, y: 0.09202262, z: 0.10613526}
-  m_DirtyAABB: 0
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 1
 --- !u!1 &5686134208185362930
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,10 +868,8 @@ Animator:
   m_GameObject: {fileID: 5686134208185362930}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d0c255d07fd68f14b94e55d388e7e6bb, type: 3}
-
   m_Controller: {fileID: 9100000, guid: 85ddcf1586057b14393d3495b3488c27, type: 2}
-
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
