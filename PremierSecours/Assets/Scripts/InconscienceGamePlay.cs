@@ -13,6 +13,7 @@ public class InconscienceGamePlay : MonoBehaviour
     public GameObject message2;
     public GameObject choix3;
     public GameObject choix4;
+    public GameObject fin;
     public AudioSource buzzSound;
     public AudioSource checkSound;
 
@@ -21,6 +22,7 @@ public class InconscienceGamePlay : MonoBehaviour
     {
         message1.gameObject.SetActive(false);
         message2.gameObject.SetActive(false);
+        fin.gameObject.SetActive(false);
         choix2.gameObject.SetActive(false);
         choix3.gameObject.SetActive(false);
         choix4.gameObject.SetActive(false);
@@ -119,8 +121,8 @@ public class InconscienceGamePlay : MonoBehaviour
         Vector3 position = new Vector3(-5.22f, 1.25f, -1.15f);
         AnimVerte(position);
 
-        //string flag = "pls";
-        //StartCoroutine(Wait(flag));
+        string flag = "fin";
+        StartCoroutine(Wait(flag));
 
     }
 
@@ -202,6 +204,12 @@ public class InconscienceGamePlay : MonoBehaviour
             choix3.gameObject.SetActive(false);
             victime.gameObject.SetActive(false);
             choix4.gameObject.SetActive(true);
+        }
+        else if (flag == "fin")
+        {
+            choix4.gameObject.SetActive(false);
+            fin.gameObject.SetActive(true);
+            
         }
     }
 
