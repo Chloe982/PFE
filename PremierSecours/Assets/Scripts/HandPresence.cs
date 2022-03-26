@@ -5,13 +5,16 @@ using UnityEngine.XR;
 
 public class HandPresence : MonoBehaviour
 {
+
     public GameObject handModelPrefab;
     private GameObject spawnedHandModel;
     private InputDevice targetDevice;
     private Animator handAnimator;
+    public InputDeviceCharacteristics controllerCharacteristics;
     // Start is called before the first frame update
     void Start()
-    {
+    {  
+
         spawnedHandModel = Instantiate(handModelPrefab, transform);
         handAnimator = spawnedHandModel.GetComponent<Animator>();
     }
