@@ -8,13 +8,17 @@ public class InconscienceGamePlay : MonoBehaviour
     public GameObject animRouge;
     public GameObject victime;
     public GameObject choix1;
+    public GameObject message1;
     public GameObject choix2;
+    public GameObject message2;
     public GameObject choix3;
     public GameObject choix4;
 
     // Start is called before the first frame update
     void Start()
     {
+        message1.gameObject.SetActive(false);
+        message2.gameObject.SetActive(false);
         choix2.gameObject.SetActive(false);
         choix3.gameObject.SetActive(false);
         choix4.gameObject.SetActive(false);
@@ -166,12 +170,27 @@ public class InconscienceGamePlay : MonoBehaviour
         {
             
             choix1.gameObject.SetActive(false);
+            message1.gameObject.SetActive(true);
+
+            string msg = "message1";
+            StartCoroutine(Wait(msg));
+        }
+        else if (flag == "message1")
+        {
+            message1.gameObject.SetActive(false);
             choix2.gameObject.SetActive(true);
-            
         }
         else if (flag == "respire")
         {
             choix2.gameObject.SetActive(false);
+            message2.gameObject.SetActive(true);
+
+            string msg = "message2";
+            StartCoroutine(Wait(msg));
+        }
+        else if (flag == "message2")
+        {
+            message2.gameObject.SetActive(false);
             choix3.gameObject.SetActive(true);
         }
         else if (flag == "pls")
