@@ -35,4 +35,9 @@ public class teleport : MonoBehaviour
         origin.transform.position = new Vector3(4f, 0f, 0f);
 
     }
+    public void teleportToMainRoom()
+    {
+        origin.transform.position = new Vector3(0f, 0f, 0f);
+
+    }
 }
