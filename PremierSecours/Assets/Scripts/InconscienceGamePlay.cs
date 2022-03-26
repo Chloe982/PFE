@@ -13,6 +13,8 @@ public class InconscienceGamePlay : MonoBehaviour
     public GameObject message2;
     public GameObject choix3;
     public GameObject choix4;
+    public AudioSource buzzSound;
+    public AudioSource checkSound;
 
     // Start is called before the first frame update
     void Start()
@@ -141,6 +143,7 @@ public class InconscienceGamePlay : MonoBehaviour
     public void AnimVerte(Vector3 position)
     {
         GameObject feuVert = Instantiate(animVerte, position, Quaternion.identity) as GameObject;
+        checkSound.Play();
         Destroy(feuVert, 3);
 
     }
@@ -148,6 +151,7 @@ public class InconscienceGamePlay : MonoBehaviour
     public void AnimRouge(Vector3 position)
     {
         GameObject feuRouge = Instantiate(animRouge, position, Quaternion.identity) as GameObject;
+        buzzSound.Play();
         Destroy(feuRouge, 3);
     }
 
