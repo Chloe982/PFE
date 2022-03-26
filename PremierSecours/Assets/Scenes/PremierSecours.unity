@@ -7038,6 +7038,7 @@ GameObject:
   - component: {fileID: 1127273902}
   - component: {fileID: 1127273901}
   - component: {fileID: 1127273900}
+  - component: {fileID: 1127273904}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -7532,6 +7533,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+
 --- !u!1 &1129216739
 GameObject:
   m_ObjectHideFlags: 0
@@ -7570,11 +7572,13 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129216741
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1129216739}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7611,6 +7615,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129216739}
   m_CullTransparentMesh: 1
+
 --- !u!1001 &1180998951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8436,6 +8441,7 @@ GameObject:
   - component: {fileID: 1277474057}
   - component: {fileID: 1277474056}
   - component: {fileID: 1277474055}
+  - component: {fileID: 1277474059}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -8930,6 +8936,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+
 --- !u!1 &1298605992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8968,11 +8975,13 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298605994
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1298605992}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9009,6 +9018,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298605992}
   m_CullTransparentMesh: 1
+
 --- !u!1001 &1309085726
 PrefabInstance:
   m_ObjectHideFlags: 0
