@@ -6,16 +6,18 @@ public class InconscienceGamePlay : MonoBehaviour
 {
     public GameObject animVerte;
     public GameObject animRouge;
+    public GameObject victime;
     public GameObject choix1;
     public GameObject choix2;
     public GameObject choix3;
-
+    public GameObject choix4;
 
     // Start is called before the first frame update
     void Start()
     {
         choix2.gameObject.SetActive(false);
         choix3.gameObject.SetActive(false);
+        choix4.gameObject.SetActive(false);
     }
 
     
@@ -85,9 +87,8 @@ public class InconscienceGamePlay : MonoBehaviour
         Vector3 position = new Vector3(-4.2f, 0.7f, 1.5f);
         AnimVerte(position);
         
-        //string flag = "pls";
-        //StartCoroutine(Wait(flag));
-        //Wait();
+        string flag = "pls";
+        StartCoroutine(Wait(flag));
 
     }
 
@@ -101,6 +102,32 @@ public class InconscienceGamePlay : MonoBehaviour
     public void Pos2()
     {
         Vector3 position = new Vector3(-5.0f, 1.46f, -1.9f);
+        AnimRouge(position);
+        //explication 
+    }
+
+    //CHOIX 4
+
+    public void Appel()
+    {
+        Vector3 position = new Vector3(-5.22f, 1.25f, -1.15f);
+        AnimVerte(position);
+
+        //string flag = "pls";
+        //StartCoroutine(Wait(flag));
+
+    }
+
+    public void BoireEau()
+    {
+        Vector3 position = new Vector3(-7.6f, 1.8f, 0.6f);
+        AnimRouge(position);
+        //explication 
+    }
+
+    public void Attendre()
+    {
+        Vector3 position = new Vector3(-4.2f, 0.7f, 1.5f);
         AnimRouge(position);
         //explication 
     }
@@ -146,6 +173,12 @@ public class InconscienceGamePlay : MonoBehaviour
         {
             choix2.gameObject.SetActive(false);
             choix3.gameObject.SetActive(true);
+        }
+        else if (flag == "pls")
+        {
+            choix3.gameObject.SetActive(false);
+            victime.gameObject.SetActive(false);
+            choix4.gameObject.SetActive(true);
         }
     }
 
