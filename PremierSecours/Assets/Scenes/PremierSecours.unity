@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 34916861}
   - component: {fileID: 34916860}
   - component: {fileID: 34916862}
+  - component: {fileID: 34916863}
   m_Layer: 0
   m_Name: GameplayScript
   m_TagString: Untagged
@@ -409,7 +410,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &34916862
 MonoBehaviour:
@@ -433,6 +434,33 @@ MonoBehaviour:
   choix3: {fileID: 20904998}
   choix4: {fileID: 134564334}
   fin: {fileID: 1816923681}
+  buzzSound: {fileID: 1658184102}
+  checkSound: {fileID: 546339020}
+--- !u!114 &34916863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34916859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eabaac1a80f867459947bf6704d4b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animVerte: {fileID: 6591967146427020560, guid: 4f77959b87a70124d955a871f4a9433d, type: 3}
+  animRouge: {fileID: 3399071444133194215, guid: 3207f3f96fbfcfd4086ec11c26cd7010, type: 3}
+  victime: {fileID: 168375607}
+  choix1: {fileID: 575134207}
+  message1: {fileID: 1026614621}
+  choix2: {fileID: 118789979}
+  message2: {fileID: 1098419374}
+  choix3: {fileID: 1805596776}
+  message3: {fileID: 856243260}
+  choix4: {fileID: 75600408}
+  message4: {fileID: 596581213}
+  fin: {fileID: 462566882}
+  defibrillateur: {fileID: 1398772095}
   buzzSound: {fileID: 1658184102}
   checkSound: {fileID: 546339020}
 --- !u!1 &37908263
@@ -2016,7 +2044,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Pls
         m_Mode: 1
@@ -3390,7 +3418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Pose2
         m_Mode: 1
@@ -3523,7 +3551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: JeterEau
         m_Mode: 1
@@ -5635,7 +5663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: ReprendreMassage
         m_Mode: 1
@@ -8323,7 +8351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Pose3
         m_Mode: 1
@@ -8740,7 +8768,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Pouls
         m_Mode: 1
@@ -9732,7 +9760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: AttendreSecours
         m_Mode: 1
@@ -10136,7 +10164,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Massage
         m_Mode: 1
@@ -11581,7 +11609,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Pose1
         m_Mode: 1
@@ -11946,7 +11974,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Enlever
         m_Mode: 1
@@ -13481,7 +13509,7 @@ MonoBehaviour:
   m_Camera: {fileID: 963194227}
   m_OriginBaseGameObject: {fileID: 1266792888}
   m_CameraFloorOffsetObject: {fileID: 927087208}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
 --- !u!4 &1266792890
 Transform:
@@ -17673,64 +17701,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660429307}
   m_CullTransparentMesh: 1
---- !u!1 &1663872804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1663872806}
-  - component: {fileID: 1663872805}
-  m_Layer: 0
-  m_Name: DefibrillateurGamePlay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1663872805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663872804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eabaac1a80f867459947bf6704d4b14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animVerte: {fileID: 6591967146427020560, guid: 4f77959b87a70124d955a871f4a9433d, type: 3}
-  animRouge: {fileID: 3399071444133194215, guid: 3207f3f96fbfcfd4086ec11c26cd7010, type: 3}
-  victime: {fileID: 168375607}
-  choix1: {fileID: 575134207}
-  message1: {fileID: 1026614621}
-  choix2: {fileID: 118789979}
-  message2: {fileID: 1098419374}
-  choix3: {fileID: 1805596776}
-  message3: {fileID: 856243260}
-  choix4: {fileID: 75600408}
-  message4: {fileID: 596581213}
-  fin: {fileID: 462566882}
-  defibrillateur: {fileID: 1398772095}
-  buzzSound: {fileID: 1658184102}
-  checkSound: {fileID: 546339020}
---- !u!4 &1663872806
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663872804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6460717, y: 0.017412305, z: 6.7875338}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668452945
 GameObject:
   m_ObjectHideFlags: 0
@@ -17849,7 +17819,7 @@ Transform:
   - {fileID: 1398772096}
   - {fileID: 462566883}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680117050
 GameObject:
@@ -18553,7 +18523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Deplacer
         m_Mode: 1
@@ -19229,7 +19199,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1663872805}
+      - m_Target: {fileID: 34916863}
         m_TargetAssemblyTypeName: DefibrillateurGamePay, Assembly-CSharp
         m_MethodName: Attendre
         m_Mode: 1

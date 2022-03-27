@@ -167,6 +167,15 @@ public class DefibrillateurGamePay : MonoBehaviour
         
     }
 
+    IEnumerator WaitShortMessage(string flag)
+    {
+
+        yield return new WaitForSeconds(5);
+
+        DiscardObjects(flag);
+
+    }
+
     IEnumerator WaitMessage(string flag)
     {
         
@@ -185,7 +194,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             message1.gameObject.SetActive(true);
 
             string msg = "message1";
-            StartCoroutine(WaitMessage(msg));
+            StartCoroutine(WaitShortMessage(msg));
         }
         else if (flag == "message1")
         {
@@ -199,7 +208,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             message2.gameObject.SetActive(true);
 
             string msg = "message2";
-            StartCoroutine(WaitMessage(msg));
+            StartCoroutine(WaitShortMessage(msg));
         }
         else if (flag == "message2")
         {
@@ -226,7 +235,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             message4.gameObject.SetActive(true);
 
             string msg = "fin";
-            StartCoroutine(WaitMessage(msg));
+            StartCoroutine(WaitShortMessage(msg));
         }
         else if(flag == "fin")
         {
