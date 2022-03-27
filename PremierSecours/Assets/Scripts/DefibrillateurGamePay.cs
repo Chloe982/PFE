@@ -11,15 +11,29 @@ public class DefibrillateurGamePay : MonoBehaviour
     public GameObject message1;
     public GameObject choix2;
     public GameObject message2;
+    public GameObject choix3;
+    public GameObject message3;
+    public GameObject choix4;
+    public GameObject message4;
+    public GameObject fin;
+    public GameObject defibrillateur;
+
     public AudioSource buzzSound;
     public AudioSource checkSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
         message1.gameObject.SetActive(false);
         message2.gameObject.SetActive(false);
+        message3.gameObject.SetActive(false);
+        message4.gameObject.SetActive(false);
+        fin.gameObject.SetActive(false);
         choix2.gameObject.SetActive(false);
+        choix3.gameObject.SetActive(false);
+        choix4.gameObject.SetActive(false);
+        defibrillateur.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -77,7 +91,56 @@ public class DefibrillateurGamePay : MonoBehaviour
         AnimRouge(position);        
     }
 
+    //CHOIX 3
 
+    public void Pose1()
+    {
+        Vector3 position = new Vector3(-0.486f, 0.369f, 6.714f);
+        AnimRouge(position);        
+    }
+
+    public void Pose2()
+    {
+        Vector3 position = new Vector3(1.231f, 0.369f, 4.165f);
+        AnimVerte(position);
+        //desactiver les 3 canvas et activer le suivant
+        string flag = "pose2";
+        StartCoroutine(Wait(flag));
+        
+    }
+
+    public void Pose3()
+    {
+        Vector3 position = new Vector3(-2.288f, 0.369f, 3.637f);
+        AnimRouge(position);        
+    }
+
+    //CHOIX 4
+
+
+    public void ReprendreMassage()
+    {
+        Vector3 position = new Vector3(0.755f, 0.734f, 6.151f);
+        AnimVerte(position);
+        //desactiver les 3 canvas et activer le suivant
+        string flag = "ReprendreMassage";
+        StartCoroutine(Wait(flag));
+        
+    }
+    
+    public void Enlever()
+    {
+        Vector3 position = new Vector3(0.755f, 0.734f, 6.151f);
+        AnimRouge(position);        
+    }
+
+    public void AttendreSecours()
+    {
+        Vector3 position = new Vector3(0.755f, 0.734f, 6.151f);
+        AnimRouge(position);        
+    }
+
+    //Animation des réponses
     public void AnimVerte(Vector3 position)
     {
         GameObject feuVert = Instantiate(animVerte, position, Quaternion.identity) as GameObject;
@@ -98,7 +161,7 @@ public class DefibrillateurGamePay : MonoBehaviour
     IEnumerator Wait(string flag)
     {
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         
         DiscardObjects(flag);
         
@@ -120,7 +183,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             message1.gameObject.SetActive(false);
             choix2.gameObject.SetActive(true);
         }
-        if(flag == "massage")
+        else if(flag == "massage")
         {
             
             choix2.gameObject.SetActive(false);
@@ -132,8 +195,38 @@ public class DefibrillateurGamePay : MonoBehaviour
         else if (flag == "message2")
         {
             message2.gameObject.SetActive(false);
-            //choix3.gameObject.SetActive(true);
+            defibrillateur.gameObject.SetActive(true);
+            choix3.gameObject.SetActive(true);
         }
+        else if (flag == "pose2")
+        {
+            choix3.gameObject.SetActive(false);
+            message3.gameObject.SetActive(true);
+            
+            string msg = "message3";
+            StartCoroutine(Wait(msg));
+        }
+        else if (flag == "message3")
+        {
+            choix4.gameObject.SetActive(true);
+            message3.gameObject.SetActive(false);
+        }
+        else if (flag == "ReprendreMassage")
+        {
+            choix4.gameObject.SetActive(false);
+            message4.gameObject.SetActive(true);
+
+            string msg = "fin";
+            StartCoroutine(Wait(msg));
+        }
+        else if(flag == "fin")
+        {
+            fin.gameObject.SetActive(true);
+            message4.gameObject.SetActive(false);
+            victime.gameObject.SetActive(false);
+            defibrillateur.gameObject.SetActive(false);
+        }
+        
     }    
 
 }
