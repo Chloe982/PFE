@@ -7,6 +7,7 @@ public class BrulureGamePlay : MonoBehaviour
     public GameObject animVerte;
     public GameObject animRouge;
     public GameObject victime;
+    public GameObject shorts;
     public GameObject choix1;
     public GameObject message1;
     public GameObject choix2;
@@ -177,6 +178,7 @@ public class BrulureGamePlay : MonoBehaviour
         {
             
             choix1.gameObject.SetActive(false);
+            shorts.gameObject.SetActive(false);
             message1.gameObject.SetActive(true);
 
             string msg = "message1";
