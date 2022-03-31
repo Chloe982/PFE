@@ -17,7 +17,8 @@ public class DefibrillateurGamePay : MonoBehaviour
     public GameObject message4;
     public GameObject fin;
     public GameObject defibrillateur;
-
+    public GameObject EcgPad;
+    
     public AudioSource buzzSound;
     public AudioSource checkSound;
 
@@ -34,6 +35,7 @@ public class DefibrillateurGamePay : MonoBehaviour
         choix3.gameObject.SetActive(false);
         choix4.gameObject.SetActive(false);
         defibrillateur.gameObject.SetActive(false);
+        EcgPad.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -206,7 +208,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             
             choix2.gameObject.SetActive(false);
             message2.gameObject.SetActive(true);
-
+            
             string msg = "message2";
             StartCoroutine(WaitShortMessage(msg));
         }
@@ -220,7 +222,8 @@ public class DefibrillateurGamePay : MonoBehaviour
         {
             choix3.gameObject.SetActive(false);
             message3.gameObject.SetActive(true);
-            
+            EcgPad.gameObject.SetActive(true);
+                        
             string msg = "message3";
             StartCoroutine(WaitMessage(msg));
         }
@@ -233,6 +236,7 @@ public class DefibrillateurGamePay : MonoBehaviour
         {
             choix4.gameObject.SetActive(false);
             message4.gameObject.SetActive(true);
+            
 
             string msg = "fin";
             StartCoroutine(WaitShortMessage(msg));
@@ -243,6 +247,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             message4.gameObject.SetActive(false);
             victime.gameObject.SetActive(false);
             defibrillateur.gameObject.SetActive(false);
+            
         }
         
     }    
