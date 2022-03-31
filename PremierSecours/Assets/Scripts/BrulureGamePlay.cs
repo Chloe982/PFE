@@ -41,7 +41,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Retirer()
     {
-        Vector3 position = new Vector3(-6f, 0.2f, 1.5f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         // Vector3 position = choix1.transform.position;
         AnimVerte(position);
         //desactiver les 3 canvas et activer le suivant
@@ -52,14 +52,14 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void PasToucher()
     {
-        Vector3 position = new Vector3(-3f, 1.7f, -0.7f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         AnimRouge(position);
        //explication
     }
 
     public void Dechirer()
     {
-        Vector3 position = new Vector3(-7.6f, 1.8f, 0.6f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         AnimRouge(position);
         //explication 
     }
@@ -68,7 +68,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Temperature()
     {
-        Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
+        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
         AnimVerte(position);
         //desactiver les 3 canvas et activer le suivant
         string flag = "temperature";
@@ -78,14 +78,14 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Froide()
     {
-        Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
+        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
         AnimRouge(position);
         //explication 
     }
 
     public void Glace()
     {
-        Vector3 position = new Vector3(-5.7f, 0.7f, 1.5f);
+        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
         AnimRouge(position);
         //explication 
     }
@@ -94,7 +94,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Allonger()
     {
-        Vector3 position = new Vector3(-4.2f, 0.7f, 1.5f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimVerte(position);
         
         string flag = "allonger";
@@ -104,14 +104,14 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Bandage()
     {
-        Vector3 position = new Vector3(-6.8f, 0.67f, -0.28f);
+        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
         AnimRouge(position);
         //explication 
     }
 
     public void Pommade()
     {
-        Vector3 position = new Vector3(-5.0f, 1.46f, -1.9f);
+        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
         AnimRouge(position);
         //explication 
     }
@@ -120,7 +120,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Appel()
     {
-        Vector3 position = new Vector3(-5.22f, 1.25f, -1.15f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimVerte(position);
 
         string flag = "fin";
@@ -130,14 +130,14 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void BoireEau()
     {
-        Vector3 position = new Vector3(-7.6f, 1.8f, 0.6f);
+        Vector3 position = new Vector3(7.799f, 1.562f, -0.747f);
         AnimRouge(position);
         //explication 
     }
 
     public void Attendre()
     {
-        Vector3 position = new Vector3(-4.2f, 0.7f, 1.5f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimRouge(position);
         //explication 
     }
@@ -164,7 +164,7 @@ public class BrulureGamePlay : MonoBehaviour
     IEnumerator Wait(string flag)
     {
         
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         
         DiscardObjects(flag);
         
