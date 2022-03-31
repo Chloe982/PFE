@@ -41,7 +41,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Retirer()
     {
-        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         // Vector3 position = choix1.transform.position;
         AnimVerte(position);
         //desactiver les 3 canvas et activer le suivant
@@ -52,14 +52,14 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void PasToucher()
     {
-        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         AnimRouge(position);
        //explication
     }
 
     public void Dechirer()
     {
-        Vector3 position = new Vector3(6.511f, 1.629f, -1.441f);
+        Vector3 position = new Vector3(5.202f, 0.905f, -1.604f);
         AnimRouge(position);
         //explication 
     }
@@ -94,7 +94,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Allonger()
     {
-        Vector3 position = new Vector3(6.823f, 0.515f, 0.144f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimVerte(position);
         
         string flag = "allonger";
@@ -120,7 +120,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Appel()
     {
-        Vector3 position = new Vector3(6.823f, 0.515f, 0.144f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimVerte(position);
 
         string flag = "fin";
@@ -137,7 +137,7 @@ public class BrulureGamePlay : MonoBehaviour
 
     public void Attendre()
     {
-        Vector3 position = new Vector3(6.823f, 0.515f, 0.144f);
+        Vector3 position = new Vector3(6.8f, 0.619f, 0.323f);
         AnimRouge(position);
         //explication 
     }
