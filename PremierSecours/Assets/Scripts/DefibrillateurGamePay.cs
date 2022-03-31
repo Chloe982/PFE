@@ -246,6 +246,7 @@ public class DefibrillateurGamePay : MonoBehaviour
             fin.gameObject.SetActive(true);
             message4.gameObject.SetActive(false);
             victime.gameObject.SetActive(false);
+            EcgPad.gameObject.SetActive(false);
             defibrillateur.gameObject.SetActive(false);
             
         }
